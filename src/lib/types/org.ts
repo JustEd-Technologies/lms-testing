@@ -40,3 +40,22 @@ export interface CurrentOrg {
     is_active: boolean; // Indicates if the subscription plan is currently active
   }[];
 }
+
+
+export interface OrgTeamMember {
+  id: number;
+  email: string;
+  verified: boolean;
+  profileId?: string;
+  fullname: string;
+  role: string;
+  isAdmin: boolean;
+}
+
+export interface OrgAudience {
+  id: string;
+  name: string;
+  email: string;
+  avatar_url: string;
+  date_joined: string;
+}

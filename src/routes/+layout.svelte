@@ -6,6 +6,8 @@
   import { Theme } from 'carbon-components-svelte';
   import type { CarbonTheme } from 'carbon-components-svelte/src/Theme/Theme.svelte';
 
+  import PlayQuiz from '$lib/pages/Quiz/PlayQuiz/index.svelte';
+
   import UpgradeModal from '$lib/ui/components/Modal/UpgradeModal/index.svelte';
   import Snackbar from '$lib/ui/components/Snackbar/index.svelte';
 
@@ -38,7 +40,7 @@
 <Snackbar />
 
 {#if data.shouldSkipAuth}
-  <p>Play Quiz</p>
+  <PlayQuiz />
 {:else if data.isOrgSite && !path}
   <p>Organization Landing Page</p>
 {:else}

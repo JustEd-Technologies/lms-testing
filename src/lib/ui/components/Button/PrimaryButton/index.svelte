@@ -1,5 +1,4 @@
 <script lang="ts">
-  // import { Moon } from 'svelte-loading-spinners';
   import { VARIANTS, VARIANTS_CLASS } from '$lib/ui/components/Button/PrimaryButton/constants';
   import { Loading } from 'carbon-components-svelte';
 

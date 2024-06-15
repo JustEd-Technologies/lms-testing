@@ -42,7 +42,7 @@ export const load = async ({ url, cookies }): Promise<LoadOutput> => {
   const response: LoadOutput = {
     orgSiteName: '',
     isOrgSite: false,
-    shouldSkipAuth: true,  // Todo: Need to set this to false later.
+    shouldSkipAuth: false,
     org: null,
   };
 
