@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, derived } from 'svelte/store';
 import type { Writable } from 'svelte/store';
 
 import type { CurrentOrg } from '$lib/types/org';
@@ -28,4 +28,8 @@ export const defaultCurrentOrgState: CurrentOrg = {
 
 export const currentOrg: Writable<CurrentOrg> = writable(
   defaultCurrentOrgState
+);
+
+export const currentOrgPath = derived(currentOrg, ($currentOrg) =>
+  $currentOrg.siteName ? `/org/${$currentOrg.siteName}` : ''
 );
